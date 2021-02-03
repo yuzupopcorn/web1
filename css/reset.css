@@ -1,0 +1,44 @@
+@charset 'utf-8';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration:none;
+    color: inherit;
+}
+
+ul li {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+select,
+input,
+textarea,
+button {
+    border: 0;
+    outline: 0;
+    vertical-align: top;
+}
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+img {
+    display: inline-block;
+}
+
+button {
+    cursor: pointer;
+}

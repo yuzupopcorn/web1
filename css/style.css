@@ -1,0 +1,193 @@
+@charset 'utf-8';
+
+.container {
+    background: linear-gradient(135deg, #9575cd, #311b92 100%);
+}
+
+.header {
+    margin: 0 auto;
+}
+
+.admin {
+    justify-content: flex-end;
+}
+
+.admin:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    display: inline-block;
+    width: 100%;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo h1 {
+    font-size: 40px;
+}
+
+.login-box {
+    width: 350px;
+    box-shadow: 0 0 5px 2px #6200ea;
+}
+
+.input-box .input {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    font-size: 14px;
+    background-color: transparent;
+    padding-left: 40px;
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+.input:focus {
+    box-shadow: 0 0 3px 1px #651fff;
+}
+
+
+
+::placeholder {
+    color: #aaa;
+}
+
+.input-box {
+    position: relative;
+}
+
+.form-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    /* translate(0,-50%);*/
+}
+
+.form-icon i {
+    font-size: 14px;
+    vertical-align: top;
+    color: #B39DDB;
+}
+
+.btn {
+    width: 100%;
+    height: 40px;
+    background-color: #673AB7;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.btn:active .login-btn,
+.btn:active .reg-btn {
+    display: inline-block;
+    margin-top: 2px;
+}
+
+.acount {
+    display: inline-block;
+    text-align: right;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
+
+.register::before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #aaa;
+    margin-bottom: 5px;
+}
+
+.rmb {
+    line-height: 14px;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+/* register */
+
+.register-box {
+    width: 350px;
+    box-shadow: 0 0 5px 2px #6200ea;
+}
+
+.register-box::before {
+    content: '* 표시는 필수입력입니다.';
+    font-size: 12px;
+    display: flex;
+    justify-content: flex-end;
+    color: tomato;
+}
+
+.req::after {
+    content: '*';
+    color: tomato;
+    padding-right: 5px;
+}
+
+.reg-input .input, .reg-input select {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    background-color: transparent;
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+    font-size: 14px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+
+.reg-input {
+    position: relative;
+}
+
+.chk-btn {
+    display: inline-block;
+    background-color: #673AB7;
+    padding: 3px 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 27px;
+    right: 5px;
+}
+
+.tologin a:hover {
+    text-decoration: underline;
+}
+
+.idChk {
+    display: inline;
+    color: dodgerblue;
+    font-size: 12px;
+}
+
+
+/*animation*/
+@keyframes run {
+    100% {
+        opacity: 1;
+        margin: 0;
+    }
+}
+
+.register-box,
+.login-box {
+    opacity: 0;
+    animation: run 1s .3s forwards;
+    margin-top: 50px;
+}
+
+/*animation end*/
