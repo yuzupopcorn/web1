@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMINISTRATOR | PROJECT</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="shortcut icon" href="images/fav.ico">
+
+    <script src="https://kit.fontawesome.com/d53c7b0373.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <style>
+        tr:first-child {
+            background-color: #7E57C2;
+            color: #fff;
+        }
+
+        .tr-even {
+            background-color: #ede7f6;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="nav-icon center font16">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="logo center font18">
+                <a href="./admin.html">ADMINISTRATOR</a>
+            </div>
+            <div class="option">
+                <div class="home font16 p-lr10">
+                    <a href="./index.html">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </div>
+                <ul class="admin gray5">
+                    <li>관리자
+                        <ul id="logout" class="admin-sub">
+                            <li><a href="./index.html">로그아웃</a></li>
+                        </ul>
+                        <span class="btn-down"><i class="fas fa-angle-down"></i></span>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="flex">
+            <nav class="flex">
+                <div class="main-menu font14">
+                    <a class="menu-tab active" href="#set">
+                        <i class="fas fa-cog"></i>
+                    </a>
+                    <a class="menu-tab" href="#user">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a class="menu-tab" href="#board">
+                        <i class="fas fa-list"></i>
+                    </a>
+                    <a class="menu-tab" href="#attendance">
+                        <i class="fas fa-briefcase"></i>
+                    </a>
+                    <a class="menu-tab" href="#approval">
+                        <i class="fas fa-file-alt"></i>
+                    </a>
+                </div>
+                <div class="sub-menu">
+                    <ul id="set" class="menu select">
+                        <h3>기본설정</h3>
+                        <li><a href="./admin_info.html">관리자정보</a></li>
+                        <li><a href="./basic_info.html">기본정보설정</a></li>
+                        <li><a href="./account_admin.html">관리자계정설정</a></li>
+                        <li><a href="./favicon.html">파비콘설정</a></li>
+                    </ul>
+
+                    <ul id="user" class="menu">
+                        <h3>사용자관리</h3>
+                        <li><a href="./member_list.html">사용자관리</a></li>
+                        <li><a href="./member_insert.html">사용자등록</a></li>
+                        <li><a href="./member_grp.html">조직관리</a></li>
+                        <li><a href="./mail_list.html">메일발송</a></li>
+                    </ul>
+                    <ul id="board" class="menu">
+                        <h3>게시판관리</h3>
+                        <li><a href="./board_list.html">게시판관리</a></li>
+                        <li><a href="./board_grp_list.html">게시판그룹관리</a></li>
+                        <li><a href="./content_list.html">내용관리</a></li>
+                    </ul>
+                    <ul id="attendance" class="menu">
+                        <h3>근태관리</h3>
+                        <li><a href="./attendance_main.html" target="_blank">근태관리시스템</a></li>
+                    </ul>
+                    <ul id="approval" class="menu">
+                        <h3>전자결재</h3>
+                        <li><a href="./approval_main.html" target="_blank">전자결재시스템</a></li>
+                    </ul>
+
+                </div>
+            </nav>
+
+            <div class="main-wrap">
+                <div class="main-top">
+                    <h2 class="infinity-b">관리자메인</h2>
+                </div>
+
+                <div class="main-content">
+                    <div class="main-top-wrap flex flex-justify">
+                        <div class="notice-list bg-white p10" style="width: 49.5%; border: 1px solid #ddd; ">
+                            <h3 class="infinity-b font16">공지사항 알림글</h3>
+                            <div class="notice-content-wrap">
+                                <div class="notice-content flex flex-justify p-tb10">
+                                    <div class="notice-left">
+                                        <p class="noto font14 weight700">
+                                            <span class="red" style="margin-right: 10px;">[공지]</span> 운영자 확인이 필요한 정보가 있습니다. 확인하세요.
+                                        </p>
+                                    </div>
+                                    <div class="notice-right">
+                                        <span class="noto gray5">09.15</span>
+                                    </div>
+                                </div>
+                                <div class="notice-content flex flex-justify p-tb10">
+                                    <div class="notice-left">
+                                        <p class="noto font14 weight700">
+                                            <span class="red" style="margin-right: 10px;">[공지]</span> 공지사항 2번째 알림글입니다.
+                                        </p>
+                                    </div>
+                                    <div class="notice-right">
+                                        <span class="noto gray5">09.15</span>
+                                    </div>
+                                </div>
+                                <div class="notice-content flex flex-justify p-tb10">
+                                    <div class="notice-left">
+                                        <p class="noto font14 weight700">
+                                            <span class="red" style="margin-right: 10px;">[공지]</span> 공지사항 3번째 알림글입니다.
+                                        </p>
+                                    </div>
+                                    <div class="notice-right">
+                                        <span class="noto gray5">09.15</span>
+                                    </div>
+                                </div>
+                                <div class="notice-content flex flex-justify p-tb10">
+                                    <div class="notice-left">
+                                        <p class="noto font14 weight700">
+                                            <span class="red" style="margin-right: 10px;">[공지]</span> 공지사항 4번째 알림글입니다. 확인하세요.
+                                        </p>
+                                    </div>
+                                    <div class="notice-right">
+                                        <span class="noto gray5">09.15</span>
+                                    </div>
+                                </div>
+                                <div class="notice-content flex flex-justify p-tb10">
+                                    <div class="notice-left">
+                                        <p class="noto font14 weight700">
+                                            <span class="red" style="margin-right: 10px;">[공지]</span> 공지사항 5번째 알림글입니다.
+                                        </p>
+                                    </div>
+                                    <div class="notice-right">
+                                        <span class="noto gray5">09.15</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="approval-list bg-white p10" style="width: 49.5%; border: 1px solid #ddd; ">
+                            <h3 class="infinity-b font16">결재대기문서</h3>
+                            <div class="approval-alert flex flex-justify p10 m-tb10 font14">
+                                <p><span class="infinity-b red">2건</span> 의 긴급 결재대기 문서가 있습니다.</p>
+                                <a href="#" style="color: #512DA8;"><i class="fas fa-chevron-right"></i></a>
+                            </div>
+                            <div class="approval-alert flex flex-justify p10 m-b10 font14">
+                                <p><span class="infinity-b red">1건</span> 의 일반 결재대기 문서가 있습니다.</p>
+                                <a href="#" style="color: #512DA8;"><i class="fas fa-chevron-right"></i></a>
+                            </div>
+                            <div class="approval-alert flex flex-justify p10 m-b10 font14">
+                                <p><span class="infinity-b">1건</span> 의 참조/열람 대기 문서가 있습니다.</p>
+                                <a href="#" style="color: #512DA8;"><i class="fas fa-chevron-right"></i></a>
+                            </div>
+                            <div class="btn-area">
+                                <button type="submit" class="btn" id="board-btn"><span class="btn-text">
+                                        결재대기문서 전체보기</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="latest m-t20" >
+                        <h3 class="infinity-b font16">최근게시물</h3>
+                        <div class="new-post">
+                            <table class="post-tbl m-tb10 font14" style="table-layout: fixed;">
+                                <tr>
+                                    <td class="td-10">그룹</td>
+                                    <td class="td-10">게시판</td>
+                                    <td>제목</td>
+                                    <td class="td-10">작성자</td>
+                                    <td class="td-20">일시</td>
+                                </tr>
+                                <tr>
+                                    <td>board</td>
+                                    <td>notice</td>
+                                    <td><a class="under" href="board_view.html">공지사항 게시판 테스트 게시물입니다.</a></td>
+                                    <td>관리자</td>
+                                    <td>2020-09-16</td>
+                                </tr>
+                                <tr>
+                                    <td>board</td>
+                                    <td>free</td>
+                                    <td><a class="under" href="#">자유게시판 테스트 게시글입니다.</a></td>
+                                    <td>관리자</td>
+                                    <td>2020-09-15</td>
+                                </tr>
+                                <tr>
+                                    <td>board</td>
+                                    <td>free</td>
+                                    <td><a class="under" href="#">자유게시판 테스트 게시글입니다.</a></td>
+                                    <td>관리자</td>
+                                    <td>2020-09-15</td>
+                                </tr>
+                                <tr>
+                                    <td>board</td>
+                                    <td>free</td>
+                                    <td><a class="under" href="#">자유게시판 테스트 게시글입니다.</a></td>
+                                    <td>관리자</td>
+                                    <td>2020-09-15</td>
+                                </tr>
+                                <tr>
+                                    <td>board</td>
+                                    <td>notice</td>
+                                    <td><a class="under" href="#">공지사항 게시판 테스트 게시물입니다.</a></td>
+                                    <td>관리자</td>
+                                    <td>2020-09-14</td>
+                                </tr>
+                                <tr>
+                                    <td>board</td>
+                                    <td>notice</td>
+                                    <td><a class="under" href="#">공지사항 게시판 테스트 게시물입니다.</a></td>
+                                    <td>관리자</td>
+                                    <td>2020-09-14</td>
+                                </tr>
+                                <tr>
+                                    <td>board</td>
+                                    <td>notice</td>
+                                    <td><a class="under" href="#">공지사항 게시판 테스트 게시물입니다.</a></td>
+                                    <td>관리자</td>
+                                    <td>2020-09-14</td>
+                                </tr>
+                                <tr>
+                                    <td>board</td>
+                                    <td>notice</td>
+                                    <td><a class="under" href="#">공지사항 게시판 테스트 게시물입니다.</a></td>
+                                    <td>관리자</td>
+                                    <td>2020-09-14</td>
+                                </tr>
+                                <tr>
+                                    <td>board</td>
+                                    <td>notice</td>
+                                    <td><a class="under" href="#">공지사항 게시판 테스트 게시물입니다.</a></td>
+                                    <td>관리자</td>
+                                    <td>2020-09-14</td>
+                                </tr>
+                                <tr>
+                                    <td>board</td>
+                                    <td>notice</td>
+                                    <td><a class="under" href="#">공지사항 게시판 테스트 게시물입니다.</a></td>
+                                    <td>관리자</td>
+                                    <td>2020-09-14</td>
+                                </tr>
+                            </table>
+                            <div class="btn-area">
+                                <button type="submit" class="btn" id="board-btn" onclick="location.href='board.html'"><span class="btn-text">
+                                        게시물 전체보기</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <span> &copy; Copyright Project All rights reserved. </span>
+                </footer>
+            </div>
+
+        </main>
+
+    </div>
+</body>
+<script src="js/admin.js"></script>
+<script>
+    
+ $(function () {
+     $("tr:nth-child(2n+1)").addClass("tr-even")
+ });
+
+</script>
+</html>

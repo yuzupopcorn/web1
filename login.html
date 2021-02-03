@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PROJECT | LOGIN</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="images/fav.ico">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/d53c7b0373.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header wrap p-tb20">
+            <span class="admin flex e6 font14 infinity-r"><a href="./admin.html">관리자 로그인</a></span>
+        </div>
+        <div class="content">
+            <div class="logo m-b10">
+                <h1 class="center f6"><a class="infinity-b" href="./index.html">PROJECT</a></h1>
+            </div>
+
+            <div class="login-box wrap p-tb30 p-lr20 bg-white">
+                <h1 class="m-b10 gray5">로그인</h1>
+                <form name="" method="POST" action="" autocomplete="off">
+                    <div class="input-box m-b5">
+                        <span class="form-icon">
+                            <i class="fas fa-address-card"></i>
+                        </span>
+                        <input type="text" name="" id="userid" class="input infinity-r" autofocus tabindex="1" placeholder="아이디 입력" required />
+                    </div>
+                    <div class="input-box">
+                        <span class="form-icon">
+                            <i class="fas fa-unlock-alt"></i>
+                        </span>
+                        <input type="password" name="" id="passwd" class="input infinity-r" autofocus tabindex="2" placeholder="비밀번호 입력" required />
+                    </div>
+                    <div class="login  m-tb10">
+                        <button type="submit" class="btn infinity-r" id="btn" onclick="location.href='admin.html'"><span class="login-btn" style="margin-left:-10px;"><i class="fas fa-sign-in-alt font16"></i> 로그인</span></button>
+                    </div>
+
+                    <div class="remember-wrap font14">
+                        <input type="checkbox" id="remember" class="remember" required />
+                        <span class="rmb gray5">아이디 기억하기</span>
+                    </div>
+
+                    <div class="register font14 m-t5 gray5">
+                        <span class="forgot float-l">
+                            <a class="noto" href="#">비밀번호를 잊어버리셨나요?</a>
+                        </span>
+                        <span class="account float-r">
+                            <a href="./register.html">회원가입</a>
+                        </span>
+                        <div class="clearfix"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/login.js"></script></html>

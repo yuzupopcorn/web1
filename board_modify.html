@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMINISTRATOR | PROJECT</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="./css/admin_sub.css">
+
+    <link rel="shortcut icon" href="images/fav.ico">
+
+    <script src="./ckeditor/ckeditor.js"></script>
+    <script src="https://kit.fontawesome.com/d53c7b0373.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <header class="flex flex-justify">
+            <div class="logo center font18">
+                <a href="./admin.html">ADMINISTRATOR</a>
+            </div>
+            <div class="option">
+                <div class="home font16 p-lr10">
+                    <a href="./index.html">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </div>
+                <ul class="admin gray5">
+                    <li>관리자
+                        <ul id="logout" class="admin-sub">
+                            <li><a href="./index.html">로그아웃</a></li>
+                        </ul>
+                        <span class="btn-down"><i class="fas fa-angle-down"></i></span>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="flex">
+
+            <div class="main-wrap">
+                <div class="main-top">
+                    <h2 class="infinity-b">게시판</h2>
+                </div>
+                <div class="main-content">
+                    <div class="page-main-wrap">
+                        <div class="title flex m-b5">
+                            <i class="fab fa-pagelines purple"></i>
+                            <h3 class="m-lr5 font16"> 게시물 수정하기</h3>
+                        </div>
+                        <div class="board_insert">
+                            <form method="POST" action="grp_board_save.html">
+                                <table>
+                                    <tr>
+                                        <td class="td-10 center weight700 noto under bg-gray">게시글 분류</td>
+                                        <td class="td-40 p-lr3">
+                                            <select name="" class="sel100">
+                                                <option value="notice">공지사항</option>
+                                                <option value="board">일반게시글</option>
+                                            </select>
+                                        </td>
+                                        <td class="td-10 center weight700 noto under bg-gray">게시글 상태</td>
+                                        <td class="td-40 p-lr3 left">
+                                            <input type="checkbox" /> 비밀글
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-10 center weight700 noto under bg-gray">게시글 제목</td>
+                                        <td class="td-90 p-lr3" colspan="3">
+                                            <input type="text" class="input100" maxlength="100" required />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-10 center weight700 noto under bg-gray">게시글 작성자</td>
+                                        <td class="td-90 p-lr3" colspan="3">
+                                            <input type="text" class="" maxlength="5" required />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-10 center weight700 noto under bg-gray">게시글 내용</td>
+                                        <td class="td-90 p-lr3" colspan="3" style="padding-top:2px;padding-bottom: 2px;">
+                                            <textarea id="editor" name="" style="border: 1px solid #d5d5d5; border-radius: 2px; padding: 5px;" class="noto">
+                                </textarea>
+                                            <script>
+                                                CKEDITOR.replace('editor');
+                                                CKEDITOR.config.height = 300;
+                                            </script>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-10 center weight700 noto under bg-gray">첨부파일</td>
+                                        <td class="td-90 p-lr3" colspan="3">
+                                            <input type="file" class="input-100" name="" id="" style="border: none;" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div class="btn-grp center m-t10">
+                                    <button type="submit" class="btn-normal">게시글수정</button>
+                                    <button type="button" onclick="location.href='board.html'" class="btn-red">게시글목록</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+                <footer>
+                    <span> &copy; Copyright Project All rights reserved. </span>
+                </footer>
+            </div>
+
+        </main>
+
+    </div>
+</body>
+<script src="js/admin.js"></script>
+</script></html>

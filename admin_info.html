@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMINISTRATOR | PROJECT</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="./css/admin_sub.css">
+    <link rel="shortcut icon" href="images/fav.ico">
+
+    <script src="https://kit.fontawesome.com/d53c7b0373.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="nav-icon center font16">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="logo center font18">
+                <a href="./admin.html">ADMINISTRATOR</a>
+            </div>
+            <div class="option">
+                <div class="home font16 p-lr10">
+                    <a href="./index.html">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </div>
+                <ul class="admin gray5">
+                    <li>관리자
+                        <ul id="logout" class="admin-sub">
+                            <li><a href="./index.html">로그아웃</a></li>
+                        </ul>
+                        <span class="btn-down"><i class="fas fa-angle-down"></i></span>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="flex">
+            <nav class="flex">
+                <div class="main-menu font14">
+                    <a class="menu-tab active" href="#set">
+                        <i class="fas fa-cog"></i>
+                    </a>
+                    <a class="menu-tab" href="#user">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a class="menu-tab" href="#board">
+                        <i class="fas fa-list"></i>
+                    </a>
+                    <a class="menu-tab" href="#attendance">
+                        <i class="fas fa-briefcase"></i>
+                    </a>
+                    <a class="menu-tab" href="#approval">
+                        <i class="fas fa-file-alt"></i>
+                    </a>
+                </div>
+                <div class="sub-menu">
+                    <ul id="set" class="menu select">
+                        <h3>기본설정</h3>
+                        <li><a href="./admin_info.html">관리자정보</a></li>
+                        <li><a href="./basic_info.html">기본정보설정</a></li>
+                        <li><a href="./account_admin.html">관리자계정설정</a></li>
+                        <li><a href="./favicon.html">파비콘설정</a></li>
+                    </ul>
+
+                    <ul id="user" class="menu">
+                        <h3>사용자관리</h3>
+                        <li><a href="./member_list.html">사용자관리</a></li>
+                        <li><a href="./member_insert.html">사용자등록</a></li>
+                        <li><a href="./member_grp.html">조직관리</a></li>
+                        <li><a href="./mail_list.html">메일발송</a></li>
+                    </ul>
+                    <ul id="board" class="menu">
+                        <h3>게시판관리</h3>
+                        <li><a href="./board_list.html">게시판관리</a></li>
+                        <li><a href="./board_grp_list.html">게시판그룹관리</a></li>
+                        <li><a href="./content_list.html">내용관리</a></li>
+                    </ul>
+                    <ul id="attendance" class="menu">
+                        <h3>근태관리</h3>
+                        <li><a href="./attendance_main.html" target="_blank">근태관리시스템</a></li>
+                    </ul>
+                    <ul id="approval" class="menu">
+                        <h3>전자결재</h3>
+                        <li><a href="./approval_main.html" target="_blank">전자결재시스템</a></li>
+                    </ul>
+
+                </div>
+            </nav>
+
+            <div class="main-wrap">
+                <div class="main-top">
+                    <h2 class="infinity-b">관리자정보</h2>
+                </div>
+
+                <div class="main-content">
+                    <form method="post">
+                        <table class="gray5 font14 bg-white">
+                            <tr>
+                                <td class="td-10 p-tb15 bg-grayE">아이디</td>
+                                <td class="left p-lr5">
+                                    admin
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-10 p-tb15 bg-grayE">패스워드</td>
+                                <td class="left p-lr5 ">
+                                    <input type="password" class="input-200" maxlength="20" style="vertical-align:middle"> <span style="display: inline-block; vertical-align:middle">(변경하실 경우에만 입력하세요)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-10 p-tb15 bg-grayE">이름</td>
+                                <td class="left p-lr5">
+                                    <input type="text" class="input-200" maxlength="15" placeholder="관리자">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-10 p-tb15 bg-grayE">이메일</td>
+                                <td class="left p-lr5">
+                                    <input type="text" class="input-350" placeholder="admin@project.co.kr">
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="btn-grp flex m-t10" style="justify-content: flex-end;">
+                            <button type="submit" class="btn-on m-lr5">확인</button>
+                            <button type="reset" class="btn-off">취소</button>
+                        </div>
+                    </form>
+                    <div class="advice-box infinity-r font14 m-t40 gray5">
+                        <i class="far fa-question-circle font20" style="color:#673AB7; vertical-align: top"></i><span> 기본 설정된 패스워드는 반드시 변경하셔서 보안 관리에 신경 써 주시기 바랍니다. </span>
+                    </div>
+                </div>
+
+                <footer>
+                    <span> &copy; Copyright Project All rights reserved. </span>
+                </footer>
+            </div>
+
+        </main>
+
+    </div>
+</body>
+<script src="js/admin.js"></script></html>

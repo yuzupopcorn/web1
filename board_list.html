@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMINISTRATOR | PROJECT</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="./css/admin_sub.css">
+    <link rel="shortcut icon" href="images/fav.ico">
+
+    <script src="https://kit.fontawesome.com/d53c7b0373.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .board-list tr:first-child {
+            background-color: #7E57C2;
+            color: #fff;
+        }
+
+        td {
+            border: 1px solid #d6dce7;
+        }
+
+        .tr-even {
+            background-color: #ede7f6;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="nav-icon center font16">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="logo center font18">
+                <a href="./admin.html">ADMINISTRATOR</a>
+            </div>
+            <div class="option">
+                <div class="home font16 p-lr10">
+                    <a href="./index.html">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </div>
+                <ul class="admin gray5">
+                    <li>관리자
+                        <ul id="logout" class="admin-sub">
+                            <li><a href="./index.html">로그아웃</a></li>
+                        </ul>
+                        <span class="btn-down"><i class="fas fa-angle-down"></i></span>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="flex">
+            <nav class="flex">
+                <div class="main-menu font14">
+                    <a class="menu-tab" href="#set">
+                        <i class="fas fa-cog"></i>
+                    </a>
+                    <a class="menu-tab" href="#user">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a class="menu-tab active" href="#board">
+                        <i class="fas fa-list"></i>
+                    </a>
+                    <a class="menu-tab" href="#attendance">
+                        <i class="fas fa-briefcase"></i>
+                    </a>
+                    <a class="menu-tab" href="#approval">
+                        <i class="fas fa-file-alt"></i>
+                    </a>
+                </div>
+                <div class="sub-menu">
+                    <ul id="set" class="menu">
+                        <h3>기본설정</h3>
+                        <li><a href="./admin_info.html">관리자정보</a></li>
+                        <li><a href="./basic_info.html">기본정보설정</a></li>
+                        <li><a href="./account_admin.html">관리자계정설정</a></li>
+                        <li><a href="./favicon.html">파비콘설정</a></li>
+                    </ul>
+
+                    <ul id="user" class="menu">
+                        <h3>사용자관리</h3>
+                        <li><a href="./member_list.html">사용자관리</a></li>
+                        <li><a href="./member_insert.html">사용자등록</a></li>
+                        <li><a href="./member_grp.html">조직관리</a></li>
+                        <li><a href="./mail_list.html">메일발송</a></li>
+                    </ul>
+                    <ul id="board" class="menu select">
+                        <h3>게시판관리</h3>
+                        <li><a href="./board_list.html">게시판관리</a></li>
+                        <li><a href="./board_grp_list.html">게시판그룹관리</a></li>
+                        <li><a href="./content_list.html">내용관리</a></li>
+                    </ul>
+                    <ul id="attendance" class="menu">
+                        <h3>근태관리</h3>
+                        <li><a href="./attendance_main.html" target="_blank">근태관리시스템</a></li>
+                    </ul>
+                    <ul id="approval" class="menu">
+                        <h3>전자결재</h3>
+                        <li><a href="./approval_main.html" target="_blank">전자결재시스템</a></li>
+                    </ul>
+
+                </div>
+            </nav>
+
+            <div class="main-wrap">
+                <div class="main-top">
+                    <h2 class="infinity-b">게시판관리</h2>
+
+                </div>
+
+                <div class="main-content">
+                    <div class="page-main-wrap">
+                        <div class="">
+                            <span class="btn-normal">생성된 게시판 수 10 개</span>
+                        </div>
+                        <div class="title flex m-tb10">
+                            <i class="fab fa-pagelines purple"></i>
+                            <h3 class="m-lr5 font16"> 게시판생성</h3>
+                        </div>
+                        <div class="board-maker">
+                            <form method="POST" action="">
+                                <table>
+                                    <tr class="center">
+                                        <td class="td-10 bg-gray under weight700">게시판그룹</td>
+                                        <td class="td-15 p-lr3">
+                                            <select class="sel-100">
+                                                <option value="">영업부</option>
+                                                <option value="">관리부</option>
+                                                <option value="">인사부</option>
+                                                <option value="">알림판</option>
+                                                <option value="">총무과</option>
+                                            </select>
+                                        </td>
+                                        <td class="td-10 bg-gray under weight700">게시판코드</td>
+                                        <td class="td-15 p-lr3">
+                                            <input type="text" id="" class="input-100" placeholder="영어로 입력" />
+                                        </td>
+                                        <td class="td-10 bg-gray under weight700">게시판색상</td>
+                                        <td class="td-15 p-lr3">
+                                            <select class="sel-100">
+                                                <option value="#ff0000">#ff0000</option>
+                                                <option value="0000ff">#0000ff</option>
+                                                <option value="cccccc">#cccccc</option>
+                                            </select>
+                                            <span class="color"></span>
+                                        </td>
+                                        <td class="td-10 bg-gray under weight700">게시판관리자</td>
+                                        <td class="td-15 p-lr3">
+                                            <select class="sel-100">
+                                                <option value="">admin</option>
+                                                <option value="">sub</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr class="center">
+                                        <td class="td-10 bg-gray under weight700">게시판제목</td>
+                                        <td class="td-90 p-lr3" colspan="7">
+                                            <input type="text" id="" class="input-100" />
+                                        </td>
+                                    </tr>
+                                    <tr class="center">
+                                        <td class="td-10 bg-gray under weight700">읽기권한</td>
+                                        <td class="td-15 p-lr3">
+                                            <select class="sel-100">
+                                                <option value="">9</option>
+                                                <option value="">8</option>
+                                                <option value="">7</option>
+                                                <option value="">6</option>
+                                                <option value="">5</option>
+                                                <option value="">4</option>
+                                                <option value="">3</option>
+                                                <option value="">2</option>
+                                                <option value="">1</option>
+                                                <option value="">0</option>
+                                            </select>
+                                        </td>
+                                        <td class="td-10 bg-gray under weight700">쓰기권한</td>
+                                        <td class="td-15 p-lr3">
+                                            <select class="sel-100">
+                                                <option value="">9</option>
+                                                <option value="">8</option>
+                                                <option value="">7</option>
+                                                <option value="">6</option>
+                                                <option value="">5</option>
+                                                <option value="">4</option>
+                                                <option value="">3</option>
+                                                <option value="">2</option>
+                                                <option value="">1</option>
+                                                <option value="">0</option>
+                                            </select>
+                                        </td>
+                                        <td class="td-10 bg-gray under weight700">댓글권한</td>
+                                        <td class="td-15 p-lr3">
+                                            <select class="sel-100">
+                                                <option value="">9</option>
+                                                <option value="">8</option>
+                                                <option value="">7</option>
+                                                <option value="">6</option>
+                                                <option value="">5</option>
+                                                <option value="">4</option>
+                                                <option value="">3</option>
+                                                <option value="">2</option>
+                                                <option value="">1</option>
+                                                <option value="">0</option>
+                                            </select>
+                                        </td>
+                                        <td class="td-10 bg-gray under weight700">다운권한</td>
+                                        <td class="td-15 p-lr3">
+                                            <select class="sel-100">
+                                                <option value="">9</option>
+                                                <option value="">8</option>
+                                                <option value="">7</option>
+                                                <option value="">6</option>
+                                                <option value="">5</option>
+                                                <option value="">4</option>
+                                                <option value="">3</option>
+                                                <option value="">2</option>
+                                                <option value="">1</option>
+                                                <option value="">0</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div class="btn-grp center m-t10">
+                                    <button class="btn-on" type="">게시판생성</button>
+                                    <button class="btn-off" type="reset">취소하기</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="title flex m-b10">
+                            <i class="fab fa-pagelines purple"></i>
+                            <h3 class="m-lr5 font16"> 게시판목록</h3>
+                        </div>
+                        <div class="board-list">
+                            <table>
+                                <tr class="center under weight700 tr-color f6 font14">
+                                    <td class="td-5"><input type="checkbox" /></td>
+                                    <td class="td-10">게시물그룹</td>
+                                    <td class="td-10">게시판코드</td>
+                                    <td class="td-10">게시판색상</td>
+                                    <td>게시판제목</td>
+                                    <td class="td-5">읽기권한</td>
+                                    <td class="td-5">쓰기권한</td>
+                                    <td class="td-5">댓글권한</td>
+                                    <td class="td-5">다운권한</td>
+                                    <td class="td-10">게시판관리</td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td><input type="checkbox" /></td>
+                                    <td>영업부</td>
+                                    <td>
+                                        <a href="board.html" target="_blank" class="under">notice</a>
+                                    </td>
+                                    <td>#cccccc</td>
+                                    <td><a href="board.html" target="_blank" class="under">영업부 게시판 공지사항 게시물 테스트</a></td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>
+                                        <span class="s-btn-on">수정</span>
+                                        <span class="s-btn-off">삭제</span>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td><input type="checkbox" /></td>
+                                    <td>영업부</td>
+                                    <td>
+                                        <a href="board_list.html" target="_blank" class="under">notice</a>
+                                    </td>
+                                    <td>#cccccc</td>
+                                    <td><a href="board_list.html" target="_blank" class="under">영업부 공지사항 게시판 게시물 업로드 테스트</a></td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>
+                                        <span class="s-btn-on">수정</span>
+                                        <span class="s-btn-off">삭제</span>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td><input type="checkbox" /></td>
+                                    <td>영업부</td>
+                                    <td>
+                                        <a href="board_list.html" target="_blank" class="under">notice</a>
+                                    </td>
+                                    <td>#cccccc</td>
+                                    <td><a href="board_list.html" target="_blank" class="under">영업부 일반게시판 게시물 테스트</a></td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>
+                                        <span class="s-btn-on">수정</span>
+                                        <span class="s-btn-off">삭제</span>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td><input type="checkbox" /></td>
+                                    <td>영업부</td>
+                                    <td>
+                                        <a href="board_list.html" target="_blank" class="under">notice</a>
+                                    </td>
+                                    <td>#cccccc</td>
+                                    <td><a href="board_list.html" target="_blank" class="under">영업부 일반 게시판 게시물 업로드 테스트</a></td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>
+                                        <span class="s-btn-on">수정</span>
+                                        <span class="s-btn-off">삭제</span>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td><input type="checkbox" /></td>
+                                    <td>관리부</td>
+                                    <td>
+                                        <a href="board_list.html" target="_blank" class="under">notice</a>
+                                    </td>
+                                    <td>#cccccc</td>
+                                    <td><a href="board_list.html" target="_blank" class="under">관리부 공지사항 게시판 게시물 업로드 테스트</a></td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>
+                                        <span class="s-btn-on">수정</span>
+                                        <span class="s-btn-off">삭제</span>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td><input type="checkbox" /></td>
+                                    <td>관리부</td>
+                                    <td>
+                                        <a href="board_list.html" target="_blank" class="under">free</a>
+                                    </td>
+                                    <td>#cccccc</td>
+                                    <td><a href="board_list.html" target="_blank" class="under">관리부 일반 게시판 게시물 업로드 테스트</a></td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>
+                                        <span class="s-btn-on">수정</span>
+                                        <span class="s-btn-off">삭제</span>
+                                    </td>
+                                </tr>
+                                <tr class="center font14 ">
+                                    <td><input type="checkbox" /></td>
+                                    <td>인사부</td>
+                                    <td>
+                                        <a href="board_list.html" target="_blank" class="under">notice</a>
+                                    </td>
+                                    <td>#cccccc</td>
+                                    <td><a href="board_list.html" target="_blank" class="under">인사부 공지사항 게시판 게시물 업로드 테스트</a></td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>
+                                        <span class="s-btn-on">수정</span>
+                                        <span class="s-btn-off">삭제</span>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td><input type="checkbox" /></td>
+                                    <td>인사부</td>
+                                    <td>
+                                        <a href="board_list.html" target="_blank" class="under">notice</a></td>
+                                    <td>#cccccc</td>
+                                    <td><a href="board_list.html" target="_blank" class="under">인사부 일반 게시판 게시물 테스트</a></td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>
+                                        <span class="s-btn-on">수정</span>
+                                        <span class="s-btn-off">삭제</span>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td><input type="checkbox" /></td>
+                                    <td>알림판</td>
+                                    <td>
+                                        <a href="board_list.html" target="_blank" class="under">notice</a></td>
+                                    <td>#cccccc</td>
+                                    <td><a href="board_list.html" target="_blank" class="under">사내 공지사항</a></td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>
+                                        <span class="s-btn-on">수정</span>
+                                        <span class="s-btn-off">삭제</span>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td><input type="checkbox" /></td>
+                                    <td>총무과</td>
+                                    <td>
+                                        <a href="board_list.html" target="_blank" class="under">notice</a></td>
+                                    <td>#cccccc</td>
+                                    <td><a href="board_list.html" target="_blank" class="under">인사부 총무과 게시판 공지사항 게시물 업로드 테스트</a></td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>
+                                        <span class="s-btn-on">수정</span>
+                                        <span class="s-btn-off">삭제</span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="page-grp center m-t10">
+                                <span class="page"><a href="#"><i class="fas fa-angle-double-left"></i></a></span>
+                                <span class="page"><a href="#"><i class="fas fa-angle-left"></i></a></span>
+                                <span class="page page-active"><a href="#" class="f6">1</a></span>
+                                <span class="page"><a href="#">2</a></span>
+                                <span class="page"><a href="#">3</a></span>
+                                <span class="page"><a href="#">4</a></span>
+                                <span class="page"><a href="#">5</a></span>
+                                <span class="page"><a href="#"><i class="fas fa-angle-right"></i></a></span>
+                                <span class="page"><a href="#"><i class="fas fa-angle-double-right"></i></a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer>
+                    <span> &copy; Copyright Project All rights reserved. </span>
+                </footer>
+            </div>
+
+        </main>
+
+    </div>
+</body>
+<script src="js/admin.js"></script>
+<script>
+    $(function() {
+        $(".board-list tr:nth-child(2n+1)").addClass("tr-even")
+    })
+
+</script>
+
+</html>

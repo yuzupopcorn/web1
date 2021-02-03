@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMINISTRATOR | PROJECT</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="./css/admin_sub.css">
+    <link rel="shortcut icon" href="images/fav.ico">
+
+    <script src="https://kit.fontawesome.com/d53c7b0373.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .board-list tr:first-child {
+            background-color: #7E57C2;
+            color: #fff;
+        }
+
+        td {
+            border: 1px solid #d6dce7;
+        }
+
+        .tr-even {
+            background-color: #ede7f6;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <header class="flex flex-justify">
+            <div class="logo center font18">
+                <a href="./admin.html">ADMINISTRATOR</a>
+            </div>
+            <div class="option">
+                <div class="home font16 p-lr10">
+                    <a href="./index.html">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </div>
+                <ul class="admin gray5">
+                    <li>관리자
+                        <ul id="logout" class="admin-sub">
+                            <li><a href="./index.html">로그아웃</a></li>
+                        </ul>
+                        <span class="btn-down"><i class="fas fa-angle-down"></i></span>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="flex">
+
+            <div class="main-wrap">
+                <div class="main-top">
+                    <h2 class="infinity-b">게시판</h2>
+                </div>
+                <div class="main-content">
+                    <div class="page-main-wrap">
+                        <div class="grp-search flex flex-justify">
+                            <div class="">
+                                <span class="btn-normal fon14">전체 게시물 75 건</span>
+                            </div>
+                            <div class="">
+                                <form method="POST" action="./member_list.html">
+
+                                    <select class="" name="searchOpt">
+                                        <option value="subject">제목</option>
+                                        <option value="writer">작성자</option>
+                                        <option value="all">제목+작성자</option>
+                                    </select>
+                                    <input type="text" name="words" class="input-200 p-lr5" required />
+                                    <button type="submit" class="btn-off" style="margin-left: 2px;">게시글검색</button>
+                                    <button type="button" class="btn-on" onclick="location.href='board_insert.html'">게시글작성</button>
+                                </form>
+                            </div>
+
+                        </div>
+
+                        <div class="board-list m-t10">
+                            <table>
+                                <tr class="center under weight700 tr-color f6 font14">
+                                    <td class="td-5"><input type="checkbox" /></td>
+                                    <td class="td-5">번호</td>
+                                    <td class="td-8">분류</td>
+                                    <td>게시물제목</td>
+                                    <td class="td-10">작성자</td>
+                                    <td class="td-5">조회</td>
+                                    <td class="td-15">날짜</td>
+                                    <td class="td-10">게시판관리</td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td><input type="checkbox" /></td>
+                                    <td>10</td>
+                                    <td>공지</td>
+                                    <td class="left p-lr5"><a href="board_view.html" class="under">게시물 등록 테스트입니다.</a></td>
+                                    <td>관리자</td>
+                                    <td>0</td>
+                                    <td>2020-09-18</td>
+                                    <td>
+                                        <button type="button" class="s-btn-on" onclick="location.href='board_modify.html'">수정</button>
+                                        <button type="button" class="s-btn-off">삭제</button>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td><input type="checkbox" /></td>
+                                    <td>9</td>
+                                    <td>일반</td>
+                                    <td class="left p-lr5"><a href="board_view.html" class="under">게시물 등록 테스트입니다.</a></td>
+                                    <td>관리자</td>
+                                    <td>0</td>
+                                    <td>2020-09-18</td>
+                                    <td>
+                                        <button type="button" class="s-btn-on" onclick="location.href='board_modify.html'">수정</button>
+                                        <button type="button" class="s-btn-off">삭제</button>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td><input type="checkbox" /></td>
+                                    <td>8</td>
+                                    <td>일반</td>
+                                    <td class="left p-lr5"><a href="board_view.html" class="under">게시판 페이지 게시물 등록 테스트입니다.</a></td>
+                                    <td>관리자</td>
+                                    <td>0</td>
+                                    <td>2020-09-18</td>
+                                    <td>
+                                        <button type="button" class="s-btn-on" onclick="location.href='board_modify.html'">수정</button>
+                                        <button type="button" class="s-btn-off">삭제</button>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td><input type="checkbox" /></td>
+                                    <td>7</td>
+                                    <td>일반</td>
+                                    <td class="left p-lr5"><a href="board_view.html" class="under">게시물 등록 테스트입니다.</a></td>
+                                    <td>관리자</td>
+                                    <td>1</td>
+                                    <td>2020-09-18</td>
+                                    <td>
+                                        <button type="button" class="s-btn-on" onclick="location.href='board_modify.html'">수정</button>
+                                        <button type="button" class="s-btn-off">삭제</button>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td><input type="checkbox" /></td>
+                                    <td>6</td>
+                                    <td>공지</td>
+                                    <td class="left p-lr5"><a href="board_view.html" class="under">게시물 등록 테스트입니다.</a></td>
+                                    <td>관리자</td>
+                                    <td>3</td>
+                                    <td>2020-09-18</td>
+                                    <td>
+                                        <button type="button" class="s-btn-on" onclick="location.href='board_modify.html'">수정</button>
+                                        <button type="button" class="s-btn-off">삭제</button>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td><input type="checkbox" /></td>
+                                    <td>5</td>
+                                    <td>일반</td>
+                                    <td class="left p-lr5"><a href="board_view.html" class="under">게시판 페이지 게시물 등록 테스트입니다.</a></td>
+                                    <td>홍길동</td>
+                                    <td>3</td>
+                                    <td>2020-09-18</td>
+                                    <td>
+                                        <button type="button" class="s-btn-on" onclick="location.href='board_modify.html'">수정</button>
+                                        <button type="button" class="s-btn-off">삭제</button>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td><input type="checkbox" /></td>
+                                    <td>4</td>
+                                    <td>일반</td>
+                                    <td class="left p-lr5"><a href="board_view.html" class="under">게시물 등록 테스트입니다.</a></td>
+                                    <td>관리자</td>
+                                    <td>7</td>
+                                    <td>2020-09-18</td>
+                                    <td>
+                                        <button type="button" class="s-btn-on" onclick="location.href='board_modify.html'">수정</button>
+                                        <button type="button" class="s-btn-off">삭제</button>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td><input type="checkbox" /></td>
+                                    <td>3</td>
+                                    <td>일반</td>
+                                    <td class="left p-lr5"><a href="board_view.html" class="under">일반 게시판 게시물 등록 테스트입니다.</a></td>
+                                    <td>관리자</td>
+                                    <td>5</td>
+                                    <td>2020-09-18</td>
+                                    <td>
+                                        <button type="button" class="s-btn-on" onclick="location.href='board_modify.html'">수정</button>
+                                        <button type="button" class="s-btn-off">삭제</button>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td><input type="checkbox" /></td>
+                                    <td>2</td>
+                                    <td>공지</td>
+                                    <td class="left p-lr5"><a href="board_view.html" class="under">공지사항 등록 테스트입니다.</a></td>
+                                    <td>관리자</td>
+                                    <td>50</td>
+                                    <td>2020-09-16</td>
+                                    <td>
+                                        <button type="button" class="s-btn-on" onclick="location.href='board_modify.html'">수정</button>
+                                        <button type="button" class="s-btn-off">삭제</button>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td><input type="checkbox" /></td>
+                                    <td>1</td>
+                                    <td>공지</td>
+                                    <td class="left p-lr5"><a href="board_view.html" class="under">공지사항 게시판 게시물 등록 테스트입니다.</a></td>
+                                    <td>관리자</td>
+                                    <td>43</td>
+                                    <td>2020-09-18</td>
+                                    <td>
+                                        <button type="button" class="s-btn-on" onclick="location.href='board_modify.html'">수정</button>
+                                        <button type="button" class="s-btn-off">삭제</button>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="page-grp center m-t10">
+                                <span class="page"><a href="#"><i class="fas fa-angle-double-left"></i></a></span>
+                                <span class="page"><a href="#"><i class="fas fa-angle-left"></i></a></span>
+                                <span class="page page-active"><a href="#" class="f6">1</a></span>
+                                <span class="page"><a href="#">2</a></span>
+                                <span class="page"><a href="#">3</a></span>
+                                <span class="page"><a href="#">4</a></span>
+                                <span class="page"><a href="#">5</a></span>
+                                <span class="page"><a href="#"><i class="fas fa-angle-right"></i></a></span>
+                                <span class="page"><a href="#"><i class="fas fa-angle-double-right"></i></a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer>
+                    <span> &copy; Copyright Project All rights reserved. </span>
+                </footer>
+            </div>
+
+        </main>
+
+    </div>
+</body>
+<script src="js/admin.js"></script>
+<script>
+    $(function() {
+        $(".board-list tr:nth-child(2n+1)").addClass("tr-even")
+    })
+
+</script>
+
+</html>

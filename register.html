@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT | 회원가입</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/fav.ico">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/d53c7b0373.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+       <div class="header wrap p-tb20">
+            <span class="admin flex e6 font14 infinity-r"><a href="./admin.html">관리자 로그인</a></span>
+        </div>
+        <div class="content">
+            <div class="logo m-b10">
+                <h1 class="center f6"><a class="infinity-b" href="./index.html">PROJECT</a></h1>
+            </div>
+
+            <div class="register-box wrap p-tb30 p-lr20 bg-white">
+                <form name="" id="" class="" method="POST" autocomplete="off">
+                    <div class="reg-input">
+                        <span class="reg-text">
+                            <span class="req"></span>아이디
+                        </span>
+                        <input type="text" name="" id="userid" class="input infinity-r" maxlength="20" autofocus placeholder="아이디를 입력하세요 (5글자 이상)" required />
+                        <p class="idChk"></p>
+                    </div>
+                    <div class="reg-input">
+                        <span class="reg-text">
+                            <span class="req"></span>비밀번호
+                        </span>
+                        <input type="password" name="" id="passwd" class="input infinity-r" maxlength="20" autofocus placeholder="비밀번호를 입력하세요 (8글자 이상)" required />
+                    </div>
+                    <div class="reg-input">
+                        <span class="reg-text">
+                            <span class="req"></span>비밀번호 확인
+                        </span>
+                        <input type="password" name="" id="passwdChk" class="input infinity-r" maxlength="20" autofocus placeholder="비밀번호를 다시 입력하세요" required />
+                    </div>
+                    <div class="reg-input">
+                        <span class="reg-text">
+                            <span class="req"></span>이름
+                        </span>
+                        <input type="text" name="" id="username" class="input infinity-r" autofocus placeholder="이름을 입력하세요" required />
+                    </div>
+                    <div class="reg-input">
+                        <span class="reg-text">
+                             <span class="req"></span>부서
+                        </span>
+                        <select class="sel-100" name="buseo" id="buseo">
+                            <option></option>
+                        </select>
+                    </div>
+                    <div class="reg-input">
+                        <span class="reg-text">
+                            <span class="req"></span>직책
+                        </span>
+                         <select class="sel-100" name="grade" id="grade">
+                            <option></option>
+                        </select>
+                    </div>
+                    <div class="reg-input">
+                        <span class="reg-text">
+                            연락처
+                        </span>
+                        <input type="text" name="" id="phone" class="input infinity-r" autofocus placeholder="ex) 010-1234-5678" />
+                    </div>
+                    
+                    <div class="reg">
+                        <button type="submit" class="btn" id="reg-btn"><span class="reg-btn">회원가입</span></button>
+                    </div>
+                </form>
+                <div class="tologin">
+                    <span class="float-r font14 gray5 m-t5"><a href="./login.html">로그인</a></span>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/register.js"></script>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMINISTRATOR | PROJECT</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="./css/admin_sub.css">
+    <link rel="shortcut icon" href="images/fav.ico">
+
+    <script src="https://kit.fontawesome.com/d53c7b0373.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        tr:first-child {
+            background-color: #7E57C2;
+            color: #fff;
+        }
+
+        .tr-even {
+            background-color: #ede7f6;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="nav-icon center font16">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="logo center font18">
+                <a href="./admin.html">ADMINISTRATOR</a>
+            </div>
+            <div class="option">
+                <div class="home font16 p-lr10">
+                    <a href="./index.html">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </div>
+                <ul class="admin gray5">
+                    <li>관리자
+                        <ul id="logout" class="admin-sub">
+                            <li><a href="./index.html">로그아웃</a></li>
+                        </ul>
+                        <span class="btn-down"><i class="fas fa-angle-down"></i></span>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="flex">
+            <nav class="flex">
+                <div class="main-menu font14">
+                    <a class="menu-tab" href="#set">
+                        <i class="fas fa-cog"></i>
+                    </a>
+                    <a class="menu-tab active" href="#user">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a class="menu-tab" href="#board">
+                        <i class="fas fa-list"></i>
+                    </a>
+                    <a class="menu-tab" href="#attendance">
+                        <i class="fas fa-briefcase"></i>
+                    </a>
+                    <a class="menu-tab" href="#approval">
+                        <i class="fas fa-file-alt"></i>
+                    </a>
+                </div>
+                <div class="sub-menu">
+                    <ul id="set" class="menu">
+                        <h3>기본설정</h3>
+                        <li><a href="./admin_info.html">관리자정보</a></li>
+                        <li><a href="./basic_info.html">기본정보설정</a></li>
+                        <li><a href="./account_admin.html">관리자계정설정</a></li>
+                        <li><a href="./favicon.html">파비콘설정</a></li>
+                    </ul>
+
+                    <ul id="user" class="menu select">
+                        <h3>사용자관리</h3>
+                        <li><a href="./member_list.html">사용자관리</a></li>
+                        <li><a href="./member_insert.html">사용자등록</a></li>
+                        <li><a href="./member_grp.html">조직관리</a></li>
+                        <li><a href="./mail_list.html">메일발송</a></li>
+                    </ul>
+                    <ul id="board" class="menu">
+                        <h3>게시판관리</h3>
+                        <li><a href="./board_list.html">게시판관리</a></li>
+                        <li><a href="./board_grp_list.html">게시판그룹관리</a></li>
+                        <li><a href="./content_list.html">내용관리</a></li>
+                    </ul>
+                    <ul id="attendance" class="menu">
+                        <h3>근태관리</h3>
+                        <li><a href="./attendance_main.html" target="_blank">근태관리시스템</a></li>
+                    </ul>
+                    <ul id="approval" class="menu">
+                        <h3>전자결재</h3>
+                        <li><a href="./approval_main.html" target="_blank">전자결재시스템</a></li>
+                    </ul>
+
+                </div>
+            </nav>
+
+            <div class="main-wrap">
+                <div class="main-top">
+                    <h2 class="infinity-b">메일발송</h2>
+
+                </div>
+
+                <div class="main-content">
+                    <div class="member-top">
+                        <div class="advice-box">
+                            <p>등록된 최고관리자의 이메일로 테스트 메일을 발송합니다.<br />
+                                현재 등록된 메일은 총 48건입니다.
+                            </p>
+                        </div>
+
+                        <div class="member-list m-t20">
+                            <div class="flex flex-justify m-b10">
+                                <div class="title flex">
+                                    <i class="fab fa-pagelines purple"></i>
+                                    <h3 class="m-lr5 font16"> 발송한 메일 목록</h3>
+                                </div>
+                            </div>
+
+                            <table>
+                                <tr class="center tr-color weight700 f6 font14 under">
+                                    <td class="td-5">
+                                        <input type="checkbox" />
+                                    </td>
+                                    <td class="td-8">번호</td>
+                                    <td>제목</td>
+                                    <td class="td-15">작성일시</td>
+                                    <td class="td-10">테스트</td>
+                                    <td class="td-10">보내기</td>
+                                    <td class="td-10">미리보기</td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-5">
+                                        <input type="checkbox" />
+                                    </td>
+                                    <td>48</td>
+                                    <td>사용자 메일 발송 테스트</td>
+                                    <td>2020-09-19 01:05:14</td>
+                                    <td>테스트</td>
+                                    <td>보내기</td>
+                                    <td>
+                                        <button type="button" class="s-btn m-lr5"><a href="mail_preview.html" target="_blank">미리보기</a></button>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-5">
+                                        <input type="checkbox" />
+                                    </td>
+                                    <td>47</td>
+                                    <td>사용자 메일 발송 테스트</td>
+                                    <td>2020-09-19 01:05:14</td>
+                                    <td>테스트</td>
+                                    <td>보내기</td>
+                                    <td>
+                                        <button type="button" class="s-btn m-lr5"><a href="mail_preview.html" target="_blank">미리보기</a></button>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-5">
+                                        <input type="checkbox" />
+                                    </td>
+                                    <td>46</td>
+                                    <td>사용자 메일 발송 테스트</td>
+                                    <td>2020-09-18 23:50:44</td>
+                                    <td>테스트</td>
+                                    <td>보내기</td>
+                                    <td>
+                                        <button type="button" class="s-btn m-lr5"><a href="mail_preview.html" target="_blank">미리보기</a></button>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-5">
+                                        <input type="checkbox" />
+                                    </td>
+                                    <td>45</td>
+                                    <td>사용자 메일 발송 테스트</td>
+                                    <td>2020-09-18 03:11:44</td>
+                                    <td>테스트</td>
+                                    <td>보내기</td>
+                                    <td>
+                                        <button type="button" class="s-btn m-lr5"><a href="mail_preview.html" target="_blank">미리보기</a></button>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-5">
+                                        <input type="checkbox" />
+                                    </td>
+                                    <td>44</td>
+                                    <td>사용자 메일 발송 테스트</td>
+                                    <td>2020-09-18 00:50:08</td>
+                                    <td>테스트</td>
+                                    <td>보내기</td>
+                                    <td>
+                                        <button type="button" class="s-btn m-lr5"><a href="mail_preview.html" target="_blank">미리보기</a></button>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-5">
+                                        <input type="checkbox" />
+                                    </td>
+                                    <td>43</td>
+                                    <td>사용자 메일 발송 테스트</td>
+                                    <td>2020-09-17 23:50:44</td>
+                                    <td>테스트</td>
+                                    <td>보내기</td>
+                                    <td>
+                                        <button type="button" class="s-btn m-lr5"><a href="mail_preview.html" target="_blank">미리보기</a></button>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-5">
+                                        <input type="checkbox" />
+                                    </td>
+                                    <td>42</td>
+                                    <td>사용자 메일 발송 테스트</td>
+                                    <td>2020-09-17 21:00:02</td>
+                                    <td>테스트</td>
+                                    <td>보내기</td>
+                                    <td>
+                                        <button type="button" class="s-btn m-lr5"><a href="mail_preview.html" target="_blank">미리보기</a></button>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-5">
+                                        <input type="checkbox" />
+                                    </td>
+                                    <td>41</td>
+                                    <td>사용자 메일 발송 테스트</td>
+                                    <td>2020-09-17 19:50:44</td>
+                                    <td>테스트</td>
+                                    <td>보내기</td>
+                                    <td>
+                                        <button type="button" class="s-btn m-lr5"><a href="mail_preview.html" target="_blank">미리보기</a></button>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-5">
+                                        <input type="checkbox" />
+                                    </td>
+                                    <td>40</td>
+                                    <td>사용자 메일 발송 테스트</td>
+                                    <td>2020-09-16 21:30:51</td>
+                                    <td>테스트</td>
+                                    <td>보내기</td>
+                                    <td>
+                                        <button type="button" class="s-btn m-lr5"><a href="mail_preview.html" target="_blank">미리보기</a></button>
+                                    </td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-5">
+                                        <input type="checkbox" />
+                                    </td>
+                                    <td>48</td>
+                                    <td>사용자 메일 발송 테스트</td>
+                                    <td>2020-09-16 16:14:00</td>
+                                    <td>테스트</td>
+                                    <td>보내기</td>
+                                    <td>
+                                        <button type="button" class="s-btn m-lr5"><a href="mail_preview.html" target="_blank">미리보기</a></button>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <div class="page-grp center m-t10">
+                                <span class="page"><a href="#"><i class="fas fa-angle-double-left"></i></a></span>
+                                <span class="page"><a href="#"><i class="fas fa-angle-left"></i></a></span>
+                                <span class="page page-active"><a href="#" class="f6">1</a></span>
+                                <span class="page"><a href="#">2</a></span>
+                                <span class="page"><a href="#">3</a></span>
+                                <span class="page"><a href="#">4</a></span>
+                                <span class="page"><a href="#">5</a></span>
+                                <span class="page"><a href="#"><i class="fas fa-angle-right"></i></a></span>
+                                <span class="page"><a href="#"><i class="fas fa-angle-double-right"></i></a></span>
+                            </div>
+                            <div class="btn-grp flex m-t10" style="justify-content: flex-end;">
+                                <button type="button" class="btn-normal m-lr5"><a href="mail_form.html" target="_blank">메일추가작성</a></button>
+                                <button type="submit" class="btn-red p-lr20">선택 삭제</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer>
+                    <span> &copy; Copyright Project All rights reserved. </span>
+                </footer>
+            </div>
+
+        </main>
+
+    </div>
+</body>
+<script src="js/admin.js"></script>
+<script>
+    
+ $(function () {
+     $("tr:nth-child(2n+1)").addClass("tr-even")
+ });
+
+</script>
+</html>

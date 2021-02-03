@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMINISTRATOR | PROJECT</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="./css/admin_sub.css">
+    <link rel="shortcut icon" href="images/fav.ico">
+
+    <script src="https://kit.fontawesome.com/d53c7b0373.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        tr:first-child {
+            background-color: #7E57C2;
+            color: #fff;
+        }
+
+        .tr-even {
+            background-color: #ede7f6;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="nav-icon center font16">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="logo center font18">
+                <a href="./admin.html">ADMINISTRATOR</a>
+            </div>
+            <div class="option">
+                <div class="home font16 p-lr10">
+                    <a href="./index.html">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </div>
+                <ul class="admin gray5">
+                    <li>관리자
+                        <ul id="logout" class="admin-sub">
+                            <li><a href="./index.html">로그아웃</a></li>
+                        </ul>
+                        <span class="btn-down"><i class="fas fa-angle-down"></i></span>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="flex">
+            <nav class="flex">
+                <div class="main-menu font14">
+                    <a class="menu-tab" href="#set">
+                        <i class="fas fa-cog"></i>
+                    </a>
+                    <a class="menu-tab active" href="#user">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a class="menu-tab" href="#board">
+                        <i class="fas fa-list"></i>
+                    </a>
+                    <a class="menu-tab" href="#attendance">
+                        <i class="fas fa-briefcase"></i>
+                    </a>
+                    <a class="menu-tab" href="#approval">
+                        <i class="fas fa-file-alt"></i>
+                    </a>
+                </div>
+                <div class="sub-menu">
+                    <ul id="set" class="menu">
+                        <h3>기본설정</h3>
+                        <li><a href="./admin_info.html">관리자정보</a></li>
+                        <li><a href="./basic_info.html">기본정보설정</a></li>
+                        <li><a href="./account_admin.html">관리자계정설정</a></li>
+                        <li><a href="./favicon.html">파비콘설정</a></li>
+                    </ul>
+
+                    <ul id="user" class="menu select">
+                        <h3>사용자관리</h3>
+                        <li><a href="./member_list.html">사용자관리</a></li>
+                        <li><a href="./member_insert.html">사용자등록</a></li>
+                        <li><a href="./member_grp.html">조직관리</a></li>
+                        <li><a href="./mail_list.html">메일발송</a></li>
+                    </ul>
+                    <ul id="board" class="menu">
+                        <h3>게시판관리</h3>
+                        <li><a href="./board_list.html">게시판관리</a></li>
+                        <li><a href="./board_grp_list.html">게시판그룹관리</a></li>
+                        <li><a href="./content_list.html">내용관리</a></li>
+                    </ul>
+                    <ul id="attendance" class="menu">
+                        <h3>근태관리</h3>
+                        <li><a href="./attendance_main.html" target="_blank">근태관리시스템</a></li>
+                    </ul>
+                    <ul id="approval" class="menu">
+                        <h3>전자결재</h3>
+                        <li><a href="./approval_main.html" target="_blank">전자결재시스템</a></li>
+                    </ul>
+
+                </div>
+            </nav>
+
+            <div class="main-wrap">
+                <div class="main-top">
+                    <h2 class="infinity-b">사용자관리</h2>
+
+                </div>
+
+                <div class="main-content">
+                    <div class="member-top">
+
+                        <div class="member-search m-t10 p-tb40">
+                            <form method="POST" action="./member_list.html">
+                                <span class="font14" style="display: inline-block; height: 35px; margin-right: 10px; line-height: 32px;">사용자 검색</span>
+                                <select class="" name="searchOpt">
+                                    <option value="username">이름</option>
+                                    <option value="userid">아이디</option>
+                                    <option value="team">소속조직</option>
+                                    <option value="grade">직급</option>
+                                </select>
+                                <input type="text" name="words" class="input-200 p-lr5" required />
+                                <button type="submit" class="btn-on">검색</button>
+                            </form>
+                        </div>
+
+                        <div class="member-list m-t20">
+                            <div class="flex flex-justify m-b10">
+                                <div class="title flex">
+                                    <i class="fab fa-pagelines purple"></i>
+                                    <h3 class="m-lr5 font16"> 사용자 관리</h3>
+                                </div>
+                                <div class="">
+                                    <button type="button" class="btn-normal" onclick="location.href='member_insert.html'">사용자등록</button>
+                                </div>
+                            </div>
+
+                            <table>
+                                <tr class="center tr-color weight700 f6 font14 under">
+                                    <td class="td-5">
+                                        <input type="checkbox" />
+                                    </td>
+                                    <td class="td-10">이름</td>
+                                    <td class="td-15">ID</td>
+                                    <td>비밀번호</td>
+                                    <td class="td-15">전화번호</td>
+                                    <td class="td-10">소속조직</td>
+                                    <td class="td-10">직급</td>
+                                    <td class="td-10">인증여부</td>
+                                    <td class="td-5">상태</td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-5">
+                                        <input type="checkbox" />
+                                    </td>
+                                    <td>어두민</td>
+                                    <td><a href="#" class="under weight700">admin</a></td>
+                                    <td>********</td>
+                                    <td>-</td>
+                                    <td>관리부</td>
+                                    <td>팀장</td>
+                                    <td>
+                                        <span class="s-btn-on">Yes</span>
+                                        <span class="s-btn-off">No</span>
+                                    </td>
+                                    <td>정상</td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-5">
+                                        <input type="checkbox" />
+                                    </td>
+                                    <td>서부자</td>
+                                    <td><a href="#" class="under weight700">sub</a></td>
+                                    <td>************</td>
+                                    <td>-</td>
+                                    <td>관리부</td>
+                                    <td>대리</td>
+                                    <td>
+                                        <span class="s-btn-on">Yes</span>
+                                        <span class="s-btn-off">No</span>
+                                    </td>
+                                    <td>정상</td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-5">
+                                        <input type="checkbox" />
+                                    </td>
+                                    <td>유우저</td>
+                                    <td><a href="#" class="under weight700">user</a></td>
+                                    <td>*******</td>
+                                    <td>-</td>
+                                    <td>영업부</td>
+                                    <td>과장</td>
+                                    <td>
+                                        <span class="s-btn-on">Yes</span>
+                                        <span class="s-btn-off">No</span>
+                                    </td>
+                                    <td>정상</td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-5">
+                                        <input type="checkbox" />
+                                    </td>
+                                    <td>사장님</td>
+                                    <td><a href="#" class="under weight700">president</a></td>
+                                    <td>*********</td>
+                                    <td>-</td>
+                                    <td>경영진</td>
+                                    <td>대표이사</td>
+                                    <td>
+                                        <span class="s-btn-on">Yes</span>
+                                        <span class="s-btn-off">No</span>
+                                    </td>
+                                    <td>정상</td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-5">
+                                        <input type="checkbox" />
+                                    </td>
+                                    <td>신 입</td>
+                                    <td><a href="#" class="under weight700">newbie</a></td>
+                                    <td>********</td>
+                                    <td>010-1234-5678</td>
+                                    <td>관리부</td>
+                                    <td>사원</td>
+                                    <td>
+                                        <span class="s-btn-on">Yes</span>
+                                        <span class="s-btn-off">No</span>
+                                    </td>
+                                    <td>정상</td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-5">
+                                        <input type="checkbox" />
+                                    </td>
+                                    <td>홍길동</td>
+                                    <td><a href="#" class="under weight700">gdhong</a></td>
+                                    <td>********</td>
+                                    <td>-</td>
+                                    <td>경영진</td>
+                                    <td>상무이사</td>
+                                    <td>
+                                        <span class="s-btn-off">Yes</span>
+                                        <span class="s-btn-on">No</span>
+                                    </td>
+                                    <td>정상</td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-5">
+                                        <input type="checkbox" />
+                                    </td>
+                                    <td>김철수</td>
+                                    <td><a href="#" class="under weight700">cskim</a></td>
+                                    <td>********</td>
+                                    <td>-</td>
+                                    <td>생산부</td>
+                                    <td>팀장</td>
+                                    <td>
+                                        <span class="s-btn-on">Yes</span>
+                                        <span class="s-btn-off">No</span>
+                                    </td>
+                                    <td>정상</td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-5">
+                                        <input type="checkbox" />
+                                    </td>
+                                    <td>김민수</td>
+                                    <td><a href="#" class="under weight700">mskim</a></td>
+                                    <td>********</td>
+                                    <td>-</td>
+                                    <td>생산부</td>
+                                    <td>부장</td>
+                                    <td>
+                                        <span class="s-btn-off">Yes</span>
+                                        <span class="s-btn-on">No</span>
+                                    </td>
+                                    <td>정상</td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-5">
+                                        <input type="checkbox" />
+                                    </td>
+                                    <td>김영수</td>
+                                    <td><a href="#" class="under weight700">yskim</a></td>
+                                    <td>********</td>
+                                    <td>-</td>
+                                    <td>인사부</td>
+                                    <td>부장</td>
+                                    <td>
+                                        <span class="s-btn-on">Yes</span>
+                                        <span class="s-btn-off">No</span>
+                                    </td>
+                                    <td>정상</td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-5">
+                                        <input type="checkbox" />
+                                    </td>
+                                    <td>김희수</td>
+                                    <td><a href="#" class="under weight700">hskim</a></td>
+                                    <td>**************</td>
+                                    <td>-</td>
+                                    <td>인사부</td>
+                                    <td>팀장</td>
+                                    <td>
+                                        <span class="s-btn-on">Yes</span>
+                                        <span class="s-btn-off">No</span>
+                                    </td>
+                                    <td>정상</td>
+                                </tr>
+                            </table>
+
+                            <div class="page-grp center m-t10">
+                                <span class="page"><a href="#"><i class="fas fa-angle-double-left"></i></a></span>
+                                <span class="page"><a href="#"><i class="fas fa-angle-left"></i></a></span>
+                                <span class="page page-active"><a href="#" class="f6">1</a></span>
+                                <span class="page"><a href="#">2</a></span>
+                                <span class="page"><a href="#">3</a></span>
+                                <span class="page"><a href="#">4</a></span>
+                                <span class="page"><a href="#">5</a></span>
+                                <span class="page"><a href="#"><i class="fas fa-angle-right"></i></a></span>
+                                <span class="page"><a href="#"><i class="fas fa-angle-double-right"></i></a></span>
+                            </div>
+                            <div class="btn-grp flex m-t10" style="justify-content: flex-end;">
+                                <button type="submit" class="btn-cancel m-lr5">엑셀 다운로드</button>
+                                <button type="submit" class="btn-red p-lr20">선택 삭제</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer>
+                    <span> &copy; Copyright Project All rights reserved. </span>
+                </footer>
+            </div>
+
+        </main>
+
+    </div>
+</body>
+<script src="js/admin.js"></script>
+<script>
+    
+ $(function () {
+     $("tr:nth-child(2n+1)").addClass("tr-even")
+ });
+
+</script>
+</html>

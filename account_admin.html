@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMINISTRATOR | PROJECT</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="./css/admin_sub.css">
+    <link rel="shortcut icon" href="images/fav.ico">
+
+    <script src="https://kit.fontawesome.com/d53c7b0373.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="nav-icon center font16">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="logo center font18">
+                <a href="./admin.html">ADMINISTRATOR</a>
+            </div>
+            <div class="option">
+                <div class="home font16 p-lr10">
+                    <a href="./index.html">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </div>
+                <ul class="admin gray5">
+                    <li>관리자
+                        <ul id="logout" class="admin-sub">
+                            <li><a href="./index.html">로그아웃</a></li>
+                        </ul>
+                        <span class="btn-down"><i class="fas fa-angle-down"></i></span>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="flex">
+            <nav class="flex">
+                <div class="main-menu font14">
+                    <a class="menu-tab active" href="#set">
+                        <i class="fas fa-cog"></i>
+                    </a>
+                    <a class="menu-tab" href="#user">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a class="menu-tab" href="#board">
+                        <i class="fas fa-list"></i>
+                    </a>
+                    <a class="menu-tab" href="#attendance">
+                        <i class="fas fa-briefcase"></i>
+                    </a>
+                    <a class="menu-tab" href="#approval">
+                        <i class="fas fa-file-alt"></i>
+                    </a>
+                </div>
+                <div class="sub-menu">
+                    <ul id="set" class="menu select">
+                        <h3>기본설정</h3>
+                        <li><a href="./admin_info.html">관리자정보</a></li>
+                        <li><a href="./basic_info.html">기본정보설정</a></li>
+                        <li><a href="./account_admin.html">관리자계정설정</a></li>
+                        <li><a href="./favicon.html">파비콘설정</a></li>
+                    </ul>
+
+                    <ul id="user" class="menu">
+                        <h3>사용자관리</h3>
+                        <li><a href="./member_list.html">사용자관리</a></li>
+                        <li><a href="./member_insert.html">사용자등록</a></li>
+                        <li><a href="./member_grp.html">조직관리</a></li>
+                        <li><a href="./mail_list.html">메일발송</a></li>
+                    </ul>
+                    <ul id="board" class="menu">
+                        <h3>게시판관리</h3>
+                        <li><a href="./board_list.html">게시판관리</a></li>
+                        <li><a href="./board_grp_list.html">게시판그룹관리</a></li>
+                        <li><a href="./content_list.html">내용관리</a></li>
+                    </ul>
+                    <ul id="attendance" class="menu">
+                        <h3>근태관리</h3>
+                        <li><a href="./attendance_main.html" target="_blank">근태관리시스템</a></li>
+                    </ul>
+                    <ul id="approval" class="menu">
+                        <h3>전자결재</h3>
+                        <li><a href="./approval_main.html" target="_blank">전자결재시스템</a></li>
+                    </ul>
+
+                </div>
+            </nav>
+
+            <div class="main-wrap">
+                <div class="main-top">
+                    <h2 class="infinity-b">관리자 계정설정</h2>
+                </div>
+
+                <div class="main-content">
+                    <div class="title flex m-b10">
+                        <i class="fab fa-pagelines purple"></i>
+                        <h3 class="m-lr5 font16"> 회원리스트</h3>
+                    </div>
+                    <table class="gray5 font14 bg-white">
+                        <tr class="td-10 p-tb15 bg-purple f6 under">
+                            <td class="td-5">번호</td>
+                            <td class="td-10">등급</td>
+                            <td class="td-10">아이디</td>
+                            <td class="td-10">이름</td>
+                            <td>이메일</td>
+                            <td class="td-10">로그인 수</td>
+                            <td class="td-15">가입일</td>
+                            <td class="td-10">관리</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>서브관리자</td>
+                            <td>sub</td>
+                            <td>서부자</td>
+                            <td>sub@project.co.kr</td>
+                            <td>0</td>
+                            <td>2020-09-17 오후 1:43:52</td>
+                            <td>
+                                <button type="button" class="s-btn-on"><a href="account_admin_reg_mod.html">수정</a></button>
+                                <button type="button" class="s-btn-off">삭제</button>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="page-grp center m-t20 gray5">
+                        <span class="page"><a href="#"><i class="fas fa-angle-double-left"></i></a></span>
+                        <span class="page"><a href="#"><i class="fas fa-angle-left"></i></a></span>
+                        <span class="page page-active"><a href="#" class="f6">1</a></span>
+                        <span class="page"><a href="#"><i class="fas fa-angle-right"></i></a></span>
+                        <span class="page"><a href="#"><i class="fas fa-angle-double-right"></i></a></span>
+                    </div>
+                    <div class="btn-grp flex m-t20" style="justify-content: flex-end;">
+                            <button type="submit" class="btn-normal m-lr5"><a href="account_admin_reg.html">관리자 등록</a></button>
+                        </div>
+                </div>
+
+                <footer>
+                    <span> &copy; Copyright Project All rights reserved. </span>
+                </footer>
+            </div>
+
+        </main>
+
+    </div>
+</body>
+<script src="js/admin.js"></script>
+<script>
+    
+ $(function () {
+     $("tr:nth-child(2n+1)").addClass("tr-even")
+ });
+
+</script>
+</html>
